@@ -84,6 +84,7 @@ function nextQuestion() {
     var questionsOver = (triviaQuestions.length - 1) === currentQuestion;
     if (questionsOver) {
         console.log("game over");
+        showResults();
     } else {
         currentQuestion++;
         showQuestion();
@@ -105,6 +106,16 @@ $(document).on('click', '.choice', function() {
         nextQuestion();
     }
 })
+
+//function to show the results of the game once all questions are answered
+function showResults() {
+    var results = `
+    <h4> Question(s) Correct: ${score}</h4>
+    <h4> Question(s) Incorrect: ${missed}</h4>
+    <button class='btn btn-primary' id='reset'>Reset Triva Game</button
+    `;
+    $('#questionSection').html(results);
+}
 
 
 //Function call to test code
