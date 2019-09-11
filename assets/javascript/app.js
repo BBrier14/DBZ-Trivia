@@ -54,10 +54,20 @@ function showChoices(choices){
         return result;
 }
 
-//function to make timer count down
+//function to make timer count down to 0 and do something if the timer counts to 0
 function countDown(){
     counter--;
     $('#time').html('Seconds Left: ' + counter);
+    if (counter === 0){
+        timeOver()
+    }
+}
+
+//function to be called by the countdown when time runs out
+function timeOver(){
+    missed++;
+    clearInterval(timer);
+    
 }
 
 //Function call to test code
