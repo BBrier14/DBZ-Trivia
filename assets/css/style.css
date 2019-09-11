@@ -1,3 +1,9 @@
 .choice {
     cursor: pointer;
 }
+
+.jumbotron {
+    background-image: url(../images/dbz.jpg);
+    color: white;
+    margin-top: 50px;
+}
