@@ -90,6 +90,21 @@ function nextQuestion() {
     }
 }
 
+//on-click function to determine if choice selected is right or wrong based on data-answer
+$(document).on('click', '.choice', function() {
+    clearInterval(timer);
+    var rightAnswer = triviaQuestions[currentQuestion].correctAnswer;
+    var buttonClicked = $(this).attr('data-answer');
+    if (rightAnswer === buttonClicked) {
+        score++;
+        console.log("yes");
+        nextQuestion();
+    } else {
+        missed++;
+        console.log("no");
+        nextQuestion();
+    }
+})
 
 
 //Function call to test code
