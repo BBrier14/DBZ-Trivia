@@ -67,8 +67,24 @@ function countDown(){
 function timeOver(){
     missed++;
     clearInterval(timer);
-    
+    nextQuestion();
+
 }
+
+//function to move on to next question if time is over and stop when there are no questions left
+function nextQuestion() {
+    var questionsOver = (triviaQuestions.length - 1) === currentQuestion;
+    if (questionsOver) {
+        console.log("game over");
+    } else {
+        currentQuestion++;
+        showQuestion();
+    }
+}
+
+
+
+
 
 //Function call to test code
 showQuestion()
