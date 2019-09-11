@@ -33,7 +33,7 @@ var timer;
 //function needed to put the questions and options list on the screen
 function showQuestion() {
     counter = 30;
-    // timer = setInterval(countDown,1000);
+    timer = setInterval(countDown,1000);
 
     var question = triviaQuestions[currentQuestion].question;
     var choices = triviaQuestions[currentQuestion].choices;
@@ -52,6 +52,12 @@ function showChoices(choices){
         result += `<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>`;
     }
         return result;
+}
+
+//function to make timer count down
+function countDown(){
+    counter--;
+    $('#time').html('Seconds Left: ' + counter);
 }
 
 //Function call to test code
