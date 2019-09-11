@@ -1,9 +1,21 @@
 .choice {
     cursor: pointer;
+    border: 2px solid yellow;
+    width: 100px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
 }
 
 .jumbotron {
     background-image: url(../images/dbz.jpg);
     color: white;
-    margin-top: 50px;
+    margin-top: 5px;
+    margin-left: -110px;
+}
+
+body{
+    font-family: 'Anton', sans-serif;
+    background-image: url(../images/goku.jpg);
+    
 }
