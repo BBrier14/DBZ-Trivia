@@ -29,6 +29,14 @@ var currentQuestion = 0;
 var timer; 
 
 
+//On-click function to make game start when start button is pressed
+$(document).on('click', '#start', function() {
+    $('#start').remove();
+    $('#time').html(counter);
+    showQuestion();
+    });
+
+
 
 //function needed to put the questions and options list on the screen
 function showQuestion() {
@@ -84,7 +92,5 @@ function nextQuestion() {
 
 
 
-
-
 //Function call to test code
-showQuestion()
+// showQuestion()
