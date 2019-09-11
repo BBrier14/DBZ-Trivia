@@ -117,6 +117,15 @@ function showResults() {
     $('#questionSection').html(results);
 }
 
+//on-click function to add functionality to the reset button
+$(document).on('click', '#reset', function() {
+     counter = 30;
+     score = 0;
+     missed = 0;
+     currentQuestion = 0;
+     timer; null;
+     showQuestion();
+})
 
 //Function call to test code
 // showQuestion()
