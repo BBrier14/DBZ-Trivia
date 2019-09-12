@@ -1,23 +1,23 @@
 //Create variables that will be used for game
 var triviaQuestions = [
 {question: "Which character is the strongest?",
-choices: ["Goku", "Beerus", "Frieza"],
+choices: ["Goku", "Beerus", "Frieza", "Cell"],
 correctAnswer: "Beerus"
 },
 {question: "What wearable item is used to detect power levels?",
-choices: ["Scouter", "Radar", "Gauger"],
+choices: ["Scouter", "Radar", "Gauger", "Detector"],
 correctAnswer: "Scouter"
 },
 {question: "Who is Buu's best friend?",
-choices: ["Bulma", "Raditz", "Hercule"],
+choices: ["Bulma", "Raditz", "Hercule", "Uub"],
 correctAnswer: "Hercule"
 },
 {question: "What kind of bean can heal a fighter?",
-choices: ["Senzu Bean", "Dragon Bean", "Demon Bean"],
+choices: ["Senzu Bean", "Dragon Bean", "Demon Bean", "Super Bean"],
 correctAnswer: "Senzu Bean"
 },
 {question: "What was the power level of the farmer in the first episode?",
-choices: ["10", "5", "2"],
+choices: ["10", "5", "2", "7"],
 correctAnswer: "5"
 },
 ]
