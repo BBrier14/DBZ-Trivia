@@ -1,6 +1,6 @@
 # TriviaGame
 ## Overview
-The Dragon Ball Z (DBZ) Trivia Game is a multiple choice quiz to test the user's knowledge of DBZ related facts
+The Dragon Ball Z (DBZ) Trivia Game is a multiple choice quiz to test the user's knowledge of DBZ related facts.
 ## How Do I Win?
 While there technically is no win condition or loss condition, a victory in this trivia game would be to correctly answer as many DBZ trivia questions as you can.
 ## How Does The Game Work?

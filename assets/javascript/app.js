@@ -88,7 +88,6 @@ function timeOver() {
 function nextQuestion() {
     var questionsOver = (triviaQuestions.length - 1) === currentQuestion;
     if (questionsOver) {
-        console.log("game over");
         showResults();
     } else {
         currentQuestion++;
@@ -103,11 +102,9 @@ $(document).on('click', '.choice', function () {
     var buttonClicked = $(this).attr('data-answer');
     if (rightAnswer === buttonClicked) {
         score++;
-        console.log("yes");
         nextQuestion();
     } else {
         missed++;
-        console.log("no");
         nextQuestion();
     }
 })
@@ -132,5 +129,4 @@ $(document).on('click', '#reset', function () {
     showQuestion();
 })
 
-//Function call to test code
-// showQuestion()
+
