@@ -1,7 +1,7 @@
 .choice {
     cursor: pointer;
     border: 2px solid yellow;
-    width: 100px;
+    width: 150px;
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size: 30px;
