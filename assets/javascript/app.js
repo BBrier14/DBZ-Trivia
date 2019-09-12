@@ -1,47 +1,52 @@
 //Create variables that will be used for game
 var triviaQuestions = [
-{question: "Which character is the strongest?",
-choices: ["Goku", "Beerus", "Frieza", "Cell"],
-correctAnswer: "Beerus"
-},
-{question: "What wearable item is used to detect power levels?",
-choices: ["Scouter", "Radar", "Gauger", "Detector"],
-correctAnswer: "Scouter"
-},
-{question: "Who is Buu's best friend?",
-choices: ["Bulma", "Raditz", "Hercule", "Uub"],
-correctAnswer: "Hercule"
-},
-{question: "What kind of bean can heal a fighter?",
-choices: ["Senzu Bean", "Dragon Bean", "Demon Bean", "Super Bean"],
-correctAnswer: "Senzu Bean"
-},
-{question: "What was the power level of the farmer in the first episode?",
-choices: ["10", "5", "2", "7"],
-correctAnswer: "5"
-},
+    {
+        question: "Which character is the strongest?",
+        choices: ["Goku", "Beerus", "Frieza", "Cell"],
+        correctAnswer: "Beerus"
+    },
+    {
+        question: "What wearable item is used to detect power levels?",
+        choices: ["Scouter", "Radar", "Gauger", "Detector"],
+        correctAnswer: "Scouter"
+    },
+    {
+        question: "Who is Buu's best friend?",
+        choices: ["Bulma", "Raditz", "Hercule", "Uub"],
+        correctAnswer: "Hercule"
+    },
+    {
+        question: "What kind of bean can heal a fighter?",
+        choices: ["Senzu Bean", "Dragon Bean", "Demon Bean", "Super Bean"],
+        correctAnswer: "Senzu Bean"
+    },
+    {
+        question: "What was the power level of the farmer in the first episode?",
+        choices: ["10", "5", "2", "7"],
+        correctAnswer: "5"
+    },
 ]
 
 var counter = 30;
 var score = 0;
 var missed = 0;
 var currentQuestion = 0;
-var timer; 
+var timer;
 
 
 //On-click function to make game start when start button is pressed
-$(document).on('click', '#start', function() {
+$(document).on('click', '#start', function () {
     $('#start').remove();
     $('#time').html(counter);
     showQuestion();
-    });
+});
 
 
 
 //function needed to put the questions and options list on the screen
 function showQuestion() {
     counter = 30;
-    timer = setInterval(countDown,1000);
+    timer = setInterval(countDown, 1000);
 
     var question = triviaQuestions[currentQuestion].question;
     var choices = triviaQuestions[currentQuestion].choices;
@@ -54,25 +59,25 @@ function showQuestion() {
 }
 
 //function to itterate through the choices of each question 
-function showChoices(choices){
+function showChoices(choices) {
     var result = '';
-    for (var i = 0; i < choices.length; i++){
+    for (var i = 0; i < choices.length; i++) {
         result += `<p class="choice" data-answer="${choices[i]}">${choices[i]}</p>`;
     }
-        return result;
+    return result;
 }
 
 //function to make timer count down to 0 and do something if the timer counts to 0
-function countDown(){
+function countDown() {
     counter--;
     $('#time').html('Seconds Left: ' + counter);
-    if (counter === 0){
+    if (counter === 0) {
         timeOver()
     }
 }
 
 //function to be called by the countdown when time runs out
-function timeOver(){
+function timeOver() {
     missed++;
     clearInterval(timer);
     nextQuestion();
@@ -92,7 +97,7 @@ function nextQuestion() {
 }
 
 //on-click function to determine if choice selected is right or wrong based on data-answer
-$(document).on('click', '.choice', function() {
+$(document).on('click', '.choice', function () {
     clearInterval(timer);
     var rightAnswer = triviaQuestions[currentQuestion].correctAnswer;
     var buttonClicked = $(this).attr('data-answer');
@@ -118,13 +123,13 @@ function showResults() {
 }
 
 //on-click function to add functionality to the reset button
-$(document).on('click', '#reset', function() {
-     counter = 30;
-     score = 0;
-     missed = 0;
-     currentQuestion = 0;
-     timer; null;
-     showQuestion();
+$(document).on('click', '#reset', function () {
+    counter = 30;
+    score = 0;
+    missed = 0;
+    currentQuestion = 0;
+    timer; null;
+    showQuestion();
 })
 
 //Function call to test code
